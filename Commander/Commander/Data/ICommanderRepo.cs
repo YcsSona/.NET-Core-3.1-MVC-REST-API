@@ -1,0 +1,21 @@
+﻿using Commander.Models;
+using System.Collections.Generic;
+
+namespace Commander.Data
+{
+    public interface ICommanderRepo
+    {
+        bool SaveChanges();
+
+        /*Gets the list of all commands of type Command model*/
+        IEnumerable<Command> GetAllCommands();
+
+        Command GetCommandById(int id);
+
+        void CreateCommand(Command cmd);
+
+        void UpdateCommand(Command cmd);
+
+        void DeleteCommand(Command cmd);
+    }
+}
